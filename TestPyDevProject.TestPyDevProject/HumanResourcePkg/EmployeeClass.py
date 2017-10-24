@@ -7,7 +7,7 @@ Created on Oct 15, 2017
 '''
 from pydoc import classname
 from random import *
-from test._test_multiprocessing import _UpperCaser
+from test.test_codeccallbacks import NoEndUnicodeDecodeError
 
 class Employee(object):
     '''
@@ -41,10 +41,32 @@ class Employee(object):
     def Print_EmpInfo(self):
         return "Employee Name: " + self.PrintEmpName()+" "+"Employee Number: " + self.emp_number + " " + "Employee SSN: " + self.ssn
       
-    
+    def Clear_EmpInfo(self):
+        self.first_name = ""
+        self.last_name = ""
+        self.street_address_1 = ""
+        self.street_address_2 = ""
+        self.city = ""
+        self.state = ""
+        self.zip_code = ""
+        self.country = ""
+        self.home_phone = ""
+        self.mobile = ""
+        self.ssn = ""
+        self.username = ""
+        self.email = ""
+        self.emp_number = ""
+                
 emp_1 = Employee("noel", "wijesinha","186 Ascalon Drive","", "Maple", "ON", "L6A0M8", "Canada", "289-217-4288", "416-9856300","463-345-123")
 
 print("Employee Name:" + emp_1.PrintEmpName()) 
-print(emp_1.Print_EmpInfo())   
-    
+
+print(emp_1.Print_EmpInfo())
+
+emp_1.Clear_EmpInfo()
+
+print("Employee Name:" + emp_1.PrintEmpName()) 
+
+print(emp_1.Print_EmpInfo())
+
     
