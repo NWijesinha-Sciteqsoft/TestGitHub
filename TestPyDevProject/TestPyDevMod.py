@@ -76,7 +76,7 @@ np_c = np.array(c); np_d = np.array(d)
 #print type of numpy arrays
 print(np_c.dtype); print(np_d.dtype)
 '''
-
+'''
 # create two dim numpy array
 e = [1,2,3,4]; f = [5,6,7,8]
 np_ef = np.array([e,f])
@@ -85,6 +85,8 @@ print(np_ef)
 print(np_ef.size)
 print(np_ef.shape)
 print(np_ef.dtype)
+'''
+
 
 
     
