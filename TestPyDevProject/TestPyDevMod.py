@@ -153,7 +153,7 @@ print("")
 print("----------")
 print("")
 '''
-
+'''
 import matplotlib.pyplot as plt
 def mandelbrot( h,w, maxit=20 ):
      """Returns an image of the Mandelbrot fractal of size (h,w)."""
@@ -173,3 +173,101 @@ def mandelbrot( h,w, maxit=20 ):
  
 plt.imshow(mandelbrot(400,400))
 plt.show()
+
+'''
+import matplotlib.pyplot as plt
+'''
+year = [1950, 1970, 1990, 2010]
+pop = [2.519, 3.692, 5.263, 6.972]
+
+plt.plot(year, pop)
+plt.show()
+plt.scatter(year, pop)
+plt.show()
+plt.bar(year, pop)
+plt.show()
+
+a = [1, 2, 3, 4]
+b = [3, 9, 2, 6]
+plt.plot(a, b)
+plt.show()
+'''
+'''
+x = 7; y = x 
+print("x= ", x, "y= ", y)
+
+print(7+23)
+
+x = 5; y= 10
+x = y
+y = x 
+
+print(x, y)
+
+print(x**2)
+print(x**2.0)
+
+print(5+6%7)
+'''
+'''
+x = 3 % 4 + 1
+y = 4 % 3 + 1
+x, y = x, y
+print(x, y)
+'''
+
+import matplotlib.pyplot as plt
+import random as rn
+
+#help(plt.hist)
+#values = [rn.randrange(start = 0,stop=20, step= 1) for i in range(10)]
+#print(values)
+#plt.hist(values, bins = 5)
+#plt.show()
+
+
+#x = [1, 3, 6, 3, 2, 7, 3, 9, 7, 5, 2, 4]
+#plt.hist(x, bins = 4)
+#plt.show()
+
+from ggplot import *
+
+ggplot(diamonds, aes(x='carat', y='price', color='cut')) +\
+    geom_point() +\
+    scale_color_brewer(type='diverging', palette=4) +\
+    xlab("Carats") + ylab("Price") + ggtitle("Diamonds")
+
+
+
+
+
+
+
+
+
+
+'''
+#Chapter 2 Exercises
+# Function to accept degrees and convert to Radians
+def angleToRadians(self):
+    degrees =self
+    radians = (degrees * 3.14)/ 180
+    return radians
+
+print("radians is ", angleToRadians(150))
+
+#Program to calculate average score for an exam
+import numpy as np
+import random as rn
+
+def studentAverageScore(self):
+    np_student_score = self
+    return np.median(np_student_score)
+# create a list of random student scores
+a =  [rn.randint(1,101) for i in range(40)]
+# print out student scores
+print("Student Scores")
+print(a)
+#print out average student score
+print("Student Average Score: ", studentAverageScore(a))
+'''
