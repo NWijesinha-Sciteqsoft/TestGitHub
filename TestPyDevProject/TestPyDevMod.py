@@ -232,6 +232,20 @@ plt.show()
 '''
 
 
+z = 5
+if z % 2 == 0:
+    print("z is even")
+else: 
+    print("z is odd")
+
+
+
+
+
+
+
+
+'''
 #Chapter 2 Exercises
 # Function to accept degrees and convert to Radians
 def angleToRadians(self):
@@ -248,10 +262,10 @@ def studentAverageScore(self):
     np_student_score = self
     return np.median(np_student_score)
 # create a list of random student scores
-a =  [rn.randint(1,101) for i in range(40)]
+a =  [rn.randint(1,101) for i in range(40000)]
 # print out student scores
 print("Student Scores")
 print(a)
 #print out average student score
 print("Student Average Score: ", studentAverageScore(a))
-
+'''
