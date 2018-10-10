@@ -239,8 +239,7 @@ else:
     print("z is odd")
 '''
 
-<<<<<<< HEAD
-=======
+
 z = 5
 if z % 2 == 0:
     print("z is even")
@@ -248,7 +247,7 @@ else:
     print("z is odd")
 
 
->>>>>>> refs/remotes/origin/testbranch-Oct2017
+
 
 
 
