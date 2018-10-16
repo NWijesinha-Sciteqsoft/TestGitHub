@@ -33,7 +33,7 @@ print("Oh, that's why it's False")
 
 # Print to check if 5 greater than 2
 print("Is it greater?", 5>2)
-# Print to check if 5 greater than or equal to 2
+# Print to check if 5 greater than or equal to -2
 print("Is it greater or equal", 5 >= -2)
 # Print to check if 5 less than or equal to 2
 print("Is it less or equal", 5<= -2)
