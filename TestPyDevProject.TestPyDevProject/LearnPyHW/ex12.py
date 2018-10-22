@@ -3,7 +3,7 @@ Created on Oct 22, 2018
 
 @author: nwijesinha
 '''
-from click._compat import *
+from click._compat import raw_input
 
 if __name__ == '__main__':
     # Ask the user for age and save in age variable
