@@ -15,3 +15,21 @@ y = "Those who know %s and those who %s" % (binary, do_not)
 # print x and y
 print(x)
 print(y)
+
+# Create variable hilariosu and assign False
+hilarious = False
+# Create a variable joke_evaluation and assign 'Isn't that joke so funny?
+joke_evaluation = "Isn't that joek so funny?! %r"
+
+# Print the the joke evaluation
+print (joke_evaluation % hilarious)
+
+
+'''
+Create two variable to store a sentence and then print both variable together to show the sentence
+'''
+w = "This is the left sife of..."
+e = "a string with a right side."
+
+#Print the sentence
+print(w + e)
