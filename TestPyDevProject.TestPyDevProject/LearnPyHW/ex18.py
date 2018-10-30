@@ -14,10 +14,11 @@ def print_two(*args):
     arg1, arg2 = args
     print("arg1: %r, arg3: %r" % (arg1, arg2))
  
- # creating a function that accepts only two arguments and assign to two variables   
+# creating a function that accepts only two arguments and assign to two variables   
 def print_two_again(arg1, arg2):
     print("arg1: %r, arg3: %r" % (arg1, arg2))
-
+    
+# creating a function that accepts only one arguments and assign to two variables
 def print_one(arg1):
     print("arg1: %r" % arg1)    
     
