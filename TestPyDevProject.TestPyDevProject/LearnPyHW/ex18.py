@@ -8,7 +8,7 @@ This exercise is to show Python Names, Variable, and Functions
 
 '''
 Create an function that accepts multiple argument and assign it to two variables
-This function is like a scrip with argv
+This function is like a script with argv
 '''
 def print_two(*args):
     arg1, arg2 = args
