@@ -9,7 +9,7 @@ from pydoc import classname
 from random import *
 from test.test_codeccallbacks import NoEndUnicodeDecodeError
 
-class Employee(object):
+class EmployeeClass(object):
     '''
     classdocs
     '''
@@ -57,7 +57,7 @@ class Employee(object):
         self.email = ""
         self.emp_number = ""
                 
-emp_1 = Employee("noel", "wijesinha","186 Ascalon Drive","", "Maple", "ON", "L6A0M8", "Canada", "289-217-4288", "416-9856300","463-345-123")
+emp_1 = EmployeeClass("noel", "wijesinha","186 Ascalon Drive","", "Maple", "ON", "L6A0M8", "Canada", "289-217-4288", "416-9856300","463-345-123")
 
 print("Employee Name:" + emp_1.PrintEmpName()) 
 
