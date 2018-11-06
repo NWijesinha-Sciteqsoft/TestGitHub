@@ -17,21 +17,21 @@ if __name__ == '__main__':
 # print("It"+"'"+"s a pleasure to meet you " + name +"!")
 # age = input("Your age, please? ")
 # print("So, you"+"'"+"re " + age + " years old, " + name + "!")
-'''
+
 matrix = [[1,2,3,4],
           [11,12,13,14],
           [21,22,23,24]]
-
+'''
 np_matrix = np.array(matrix)
 print(type(matrix))
 '''
 
-'''
+
 for i in range(0,3):
     for j in range(0,4):
         
         print(matrix[i][j])
- '''
+
 '''
 # populate a np_a with 3 rows and 5 columns with 0-14   
 np_a = np.arange(15).reshape(3,5)
@@ -265,6 +265,7 @@ def angleToRadians(self):
 print("radians is ", angleToRadians(150))
 
 '''
+'''
 #Program to calculate average score for an exam
 import numpy as np
 import random as rn
@@ -276,6 +277,7 @@ a =  [rn.randint(1,101) for i in range(40000)]
 # print out student scores
 print("Student Scores")
 print(a)
+'''
 '''
 #print out average student score
 print("Student Average Score: ", studentAverageScore(a))
