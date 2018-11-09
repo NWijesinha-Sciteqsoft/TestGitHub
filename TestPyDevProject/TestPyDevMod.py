@@ -17,14 +17,14 @@ if __name__ == '__main__':
 # print("It"+"'"+"s a pleasure to meet you " + name +"!")
 # age = input("Your age, please? ")
 # print("So, you"+"'"+"re " + age + " years old, " + name + "!")
-
+'''
 matrix = [[1,2,3,4],
           [11,12,13,14],
           [21,22,23,24]]
-'''
+
 np_matrix = np.array(matrix)
 print(type(matrix))
-'''
+
 
 
 for i in range(0,3):
@@ -32,6 +32,7 @@ for i in range(0,3):
         
         print(matrix[i][j])
 
+'''
 '''
 # populate a np_a with 3 rows and 5 columns with 0-14   
 np_a = np.arange(15).reshape(3,5)
@@ -192,6 +193,7 @@ b = [3, 9, 2, 6]
 plt.plot(a, b)
 plt.show()
 '''
+
 '''
 x = 7; y = x 
 print("x= ", x, "y= ", y)
@@ -239,20 +241,13 @@ else:
     print("z is odd")
 '''
 
-
+'''
 z = 5
 if z % 2 == 0:
     print("z is even")
 else: 
     print("z is odd")
-
-
-
-
-
-
-
-
+'''
 
 '''
 #Chapter 2 Exercises
