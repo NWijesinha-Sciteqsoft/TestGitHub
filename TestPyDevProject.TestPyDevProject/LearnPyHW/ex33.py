@@ -6,7 +6,6 @@ Created on Nov 6, 2018
 This exercise to learn while loop in python
 
 '''
-from lib2to3.fixer_util import Number
 
 # Declare variable for the loop condition and declare list
 i = 0
