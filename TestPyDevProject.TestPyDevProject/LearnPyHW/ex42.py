@@ -80,6 +80,3 @@ crouse = Salmon()
 
 ## harry is halibut, create harry from halibut class
 harry = Halibut()
-
-
-
