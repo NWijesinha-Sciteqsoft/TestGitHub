@@ -2,6 +2,9 @@
 Created on Nov 19, 2018
 
 @author: nwijesinha
+
+This exercise is to learn about inheritance using python
+
 '''
 
 class Other(object):
