@@ -42,5 +42,7 @@ son.implicit()
 dad.override()
 son.override()
 
+'''
 dad.altered()
 son.altered()
+'''
