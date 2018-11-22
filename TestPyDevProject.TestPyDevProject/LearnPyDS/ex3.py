@@ -49,6 +49,6 @@ print("Printing tuple 6", tuple6)
 tuple7 = tuple1
 print("before printing tuple 7", tuple7)
 del tuple7
-print("after deleting tuple 7", tuple7)
+# print("after deleting tuple 7", tuple7)
 
     
