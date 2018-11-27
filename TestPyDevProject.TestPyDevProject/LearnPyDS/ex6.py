@@ -74,3 +74,46 @@ m_c = insert(m, [5], [[10], [20], [22], [20], [18], [17], [17]], 1)
 print("Printing the matrix array")
 print(m_c)
 print("*"*20)  # print * 20 times
+
+# Deleting a row from matrix
+# Assign m matrix to m1
+m1 = m
+print("Printing matrix before deleting a row")
+print(m1)
+print("*" * 20)
+
+print("Deleting row in index 2")
+# Delete row 2 using delete function and reassign the matrix to m1 by specifying index of the row and axis value of 0 for row
+m1 = delete(m1, [2], 0)
+# print matrix after deleting
+print("Printing matrix after deleting a row")
+print(m1)
+print("*" * 20)
+
+# Deleting a column from matrix
+# Assign matrix m to m2
+m2 = m
+# Print matrix before deleting column
+print("Printing matrix before deleting column")
+print(m2)
+print("*" * 20)
+# Delete the column using delete function by specifying the index of the column and axis value 1 for column
+print("Deleting column in index 2")
+m2 = delete(m2, s_[2], 1)
+# Print matrix after deleting column
+print("Printing matrix after deleting column")
+print(m2)
+print("*" * 20)
+
+# Updating a row in a matrix
+# Assign m matrix to m3
+m3 = m 
+print("Printing the matrix before update")
+print(m3)
+print("*" * 20)
+# Updating the matrix row for Thursday with index of 3
+print("Updating values for Thursday to '0'")
+m3[3] = ['Thu', 0, 0 , 0, 0]
+print("Print the matrix after update")
+print(m3)
+print("*" * 20)
