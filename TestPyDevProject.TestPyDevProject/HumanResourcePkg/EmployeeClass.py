@@ -9,11 +9,11 @@ from pydoc import classname
 from random import *
 from test.test_codeccallbacks import NoEndUnicodeDecodeError
 
+
 class EmployeeClass(object):
     '''
     classdocs
     '''
-
 
     def __init__(self, first_name, last_name, street_address_1, street_address_2, city, state, zip_code, country, home_phone, mobile, ssn):
         '''
@@ -30,16 +30,15 @@ class EmployeeClass(object):
         self.home_phone = home_phone
         self.mobile = mobile
         self.ssn = ssn
-        self.username = first_name+ "." +last_name
+        self.username = first_name + "." + last_name
         self.email = self.username + "@companyname.com"
-        self.emp_number = str(randint(1,100))
-        
+        self.emp_number = str(randint(1, 100))
         
     def PrintEmpName(self):
         return self.first_name + " " + self.last_name
     
     def Print_EmpInfo(self):
-        return "Employee Name: " + self.PrintEmpName()+" "+"Employee Number: " + self.emp_number + " " + "Employee SSN: " + self.ssn
+        return "Employee Name: " + self.PrintEmpName() + " " + "Employee Number: " + self.emp_number + " " + "Employee SSN: " + self.ssn
       
     def Clear_EmpInfo(self):
         self.first_name = ""
@@ -56,17 +55,5 @@ class EmployeeClass(object):
         self.username = ""
         self.email = ""
         self.emp_number = ""
-                
-emp_1 = EmployeeClass("noel", "wijesinha","186 Ascalon Drive","", "Maple", "ON", "L6A0M8", "Canada", "289-217-4288", "416-9856300","463-345-123")
-
-print("Employee Name:" + emp_1.PrintEmpName()) 
-
-print(emp_1.Print_EmpInfo())
-
-emp_1.Clear_EmpInfo()
-
-print("Employee Name:" + emp_1.PrintEmpName()) 
-
-print(emp_1.Print_EmpInfo())
 
     
