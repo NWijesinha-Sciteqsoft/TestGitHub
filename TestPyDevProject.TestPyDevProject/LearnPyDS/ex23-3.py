@@ -1,5 +1,5 @@
 '''
-Created on Jan 2, 2019
+Created on Jan 3, 2019
 
 @author: nwijesinha
 
@@ -9,8 +9,9 @@ There are three ways which we use to traverse a tree
 - In-order Traversal
 - Pre-order Traversal
 - Post-order Traversal
-This exercise is to learn about Pre-Order Traversal
-In this traversal method, the root node is visited first, then the left subtree and finally the right subtree
+This exercise is to learn about Post-Order Traversal
+In this traversal method, the root node is visited last, hence the name. 
+First we traverse the left subtree, then the right subtree and finally the root node.
 We should always remember that every node may represent a subtree itself.
 
 '''
@@ -56,16 +57,16 @@ class Node:
         if self.right:
             self.right.printTree()
             
-    # Preorder Traversal
-    # Root -> left -> Right
-    def preorderTraversal(self, root):
+    # Postorder traversal
+    # Left -> Right -> Root
+    def postorderTraversal(self, root):
         res = []
         if root:
+            res = self.postorderTraversal(root.left)
+            res = res + self.postorderTraversal(root.right)
             res.append(root.data)
-            res = res + self.preorderTraversal(root.left)
-            res = res + self.preorderTraversal(root.right)
         return res
-    
+
 
 root = Node(27)
 root.insert(14)
@@ -74,5 +75,4 @@ root.insert(10)
 root.insert(19)
 root.insert(31)
 root.insert(42)
-print(root.preorderTraversal(root))
-
+print(root.postorderTraversal(root))
