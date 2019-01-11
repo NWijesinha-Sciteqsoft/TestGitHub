@@ -64,7 +64,7 @@ frame = DataFrame(records)
 print(frame)
 
 print(frame['tz'][:10])
-# Using Series object valur_counts to get the count
+# Using Series object value_counts to get the count
 tz_counts = frame['tz'].value_counts()
 print(tz_counts[:10])
 
@@ -74,9 +74,38 @@ tz_counts = clean_tz.value_counts()
 print(tz_counts[:10])
 
 tz_counts[:10].plot(kind='barh', rot=0)
-plt.show()
 
 print(frame['a'][1])
 print(frame['a'][50])
 print(frame['a'][51])
+
+results = Series([x.split()[0] for x in frame.a.dropna()])
+print(results[:5])
+
+print(results.value_counts()[:8])
+
+cframe = frame[frame.a.notnull()]
+
+operating_system = np.where(cframe['a'].str.contains('Windows'), 'Windows', 'Not Windows')
+
+print(operating_system[:5])
+
+# grouping the data by operating system
+by_tz_os = cframe.groupby(['tz', operating_system])
+# aggregate the counts
+agg_counts = by_tz_os.size().unstack().fillna(0)
+print(agg_counts[:10])
+# Select the top overal time zones
+indexer = agg_counts.sum(1).argsort()
+print(indexer[:10])
+# slice last 10 rows using take function
+count_subset = agg_counts.take(indexer)[-10:]
+print(count_subset)
+# ploting the data on a bar chart
+count_subset.plot(kind='barh', stacked=True)
+
+# sum the rows to 1 and plot the chart again
+normed_subset = count_subset.div(count_subset.sum(1), axis=0)
+normed_subset.plot(kind='barh', stacked=True)
+plt.show()
 
