@@ -55,3 +55,32 @@ print(data.ix[0])
 # calculate the mean rating using pivot_tables function
 mean_ratings = data.pivot_table('rating', index='title', columns='gender', aggfunc='mean')
 print(mean_ratings[:5])
+
+# filter movies that received at least 250 ratings
+# Create a data frame to capture rating by title
+rating_by_title = data.groupby('title').size()
+print(rating_by_title[:10])
+# create a dataframe to capture rating which got more than 250
+active_titles = rating_by_title.index[rating_by_title >= 250]
+print(active_titles[:10])
+# Index the titles which recieve 250 in mean ratings using active titles
+mean_ratings = mean_ratings.ix[active_titles]
+print(mean_ratings[:10])
+
+# Filer tp films among female viewers
+top_female_ratings = mean_ratings.sort_values(by='F', ascending=False)
+print(top_female_ratings[:10])
+# Find most division between male and female viewers for movies
+mean_ratings['Diff'] = mean_ratings['M'] - mean_ratings['F']
+sorted_by_diff = mean_ratings.sort_values(by='Diff')
+print(sorted_by_diff[:15])
+# Find the movies prefered by mean that women did not like
+print(sorted_by_diff[::-1][:15])
+
+# Standard deviation of rating grouped by title
+rating_std_by_title = data.groupby('title')['rating'].std()
+# Filter down to active title
+rating_std_by_title = rating_std_by_title.ix[active_titles]
+# order Series by value in descending order
+print(rating_std_by_title.sort_values(ascending=False)[:10])
+
